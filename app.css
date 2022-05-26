@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Fredoka+One&display=swap');
+
+:root {
+    --cafe: #D6C5AB;
+    --rojo: #EB1C22;
+    --blanco: #fff;
+    --negro: #000;
+    --amarillo: #F5C632;
+
+    --fuentePrimaria: 'Fredoka One', cursive;
+    --fuenteSecundaria: 'Boogaloo', cursive;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuentePrimaria);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--fuenteSecundaria);
+}
+
+a {
+    text-decoration: none;
+    color: var(--negro);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor {
+    max-width: 1300px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.titulo {
+    font-size: 36px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .titulo {
+        margin: 15px 0;
+        font-size: 64px;
+    }
+}
+
+/* HERO */
+.hero {
+    height: 85vh;
+    background-image: url(img/hero.jpg);
+    background-position: center center;
+    background-size: cover;
+    image-rendering: crisp-edges;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 100vh;
+        background-attachment: fixed;
+    }
+}
+
+.hero__barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+@media (min-width: 768px) {
+    .hero__barra {
+        flex-direction: row;
+    }
+}
+
+/* LOGO */
+.logo__img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .logo__img {
+        width: 220px;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+/* NAVEGACION */
+.navegacion {
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+@media (max-width: 425px) {
+    .navegacion {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        gap: 30px;
+    }
+}
+
+.navegacion__enlace {
+    padding: 10px;
+    font-size: 24px;
+    transition: .4s all;
+    color: var(--rojo);
+    font-family: 'Fredoka One', cursive;
+}
+
+@media (max-width: 425px) {
+    .navegacion__enlace {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .navegacion__enlace {
+        font-size: 24px;
+        padding: 15px 25px;
+    }
+}
+
+.navegacion__enlace:hover {
+    font-size: 26px;
+}
+
+@media (min-width: 768px) {
+    .navegacion__enlace:hover {
+        font-size: 26px;
+    }
+}
+
+/* SLOGAN */
+.slogan {
+    color: #fff;
+    background-color: var(--rojo);
+    width: 95%;
+    margin: 15vh auto 0 auto;
+    padding: 15px;
+}
+
+@media (max-width: 400px) {
+    .slogan {
+        margin: 5vh auto 0 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .slogan {
+        display: inline-block;
+        margin: 100px 0px 0 35px;
+        width: 35%;
+    }
+}
+
+.slogan__texto {
+    font-size: 24px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .slogan__texto {
+        font-size: 48px;
+        text-align: left;
+    }
+}
+
+/* MENU */
+.menu {
+    background-color: var(--blanco);
+}
+
+.menu .titulo {
+    margin-top: 35px;
+}
+
+.menu__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .menu__grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.menu__card {
+    margin-top: 15px;
+    background-color: var(--rojo);
+}
+
+.menu__card:hover .menu__img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+@media (min-width: 768px) {    
+    .menu__card:hover .menu__imagen {
+        border-radius: 50%;
+    }
+}
+
+.menu__imagen {
+    border-radius: 0px;
+    overflow: hidden;
+    transition: .4s all;
+}
+
+.menu__img {
+    height: 300px;    
+    width: 100%;
+    object-fit: cover;
+    transition: .4s all;
+}
+
+.menu__texto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: var(--blanco);
+}
+
+.menu__precio {
+    font-family: var(--fuentePrimaria);
+    font-size: 22px;
+}
+
+/* NOSOTROS */
+.nosotros {
+    background-color: var(--rojo);
+}
+
+.nosotros .titulo {
+    margin-top: 35px;
+}
+
+.nosotros__grid {
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .nosotros__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.nosotros__imagen {
+    background-image: url(img/nosotros.png);
+    background-size: cover;
+    background-position: center center;
+    min-height: 40vh;
+}
+
+.nosotros__contenido {
+    padding: 25px;
+    color: var(--blanco);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* SUCURSALES */
+.sucursales {
+    margin-top: 25px;
+}
+
+.sucursales__grid {
+    display: grid;
+    column-gap: 40px;
+}
+
+@media (min-width: 768px) {
+    .sucursales__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.sucursal iframe,
+.sucursal__imagen {
+    width: 100%;
+    height: 250px;
+    margin-top: 15px;
+    margin-bottom: -10px;
+    border: 10px solid var(--rojo);
+    border-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .sucursal iframe,
+    .sucursal__imagen {
+        height: 350px;
+    }
+}
+
+.sucursal__contenido {
+    padding: 10px;
+    text-align: center;
+    color: var(--blanco);
+    background-color: var(--rojo);
+    font-size: 28px;
+}
+
+@media (min-width: 768px) {
+    .sucursal__contenido {
+        font-size: 36px;
+    }
+}
+
+/* APERTURA */
+.apertura {
+    margin-top: 35px;
+}
+
+.apertura__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+}
+
+.apertura__caja {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja__num {
+    padding: 10px;
+    background-color: var(--amarillo);
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .caja__num {
+        padding: 40px 25px;
+        font-size: 48px;
+    }
+}
+
+.caja {
+    padding: 5px;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .caja {
+        font-size: 32px;
+    }
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    text-align: center;
+    padding: 10px;
+    margin-top: 25px;
+}
